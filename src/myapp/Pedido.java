@@ -12,6 +12,7 @@ public class Pedido {
 		private Double valorTotal;
 		private String ccf;
 		private String coo;
+		private Empresa empresa;
 		
 		public Pedidoitem getPedidoitem() {
 			return pedidoitem;
@@ -60,6 +61,12 @@ public class Pedido {
 		}
 		public void setCoo(String coo) {
 			this.coo = coo;
+		}
+		public Empresa getEmpresa() {
+			return empresa;
+		}
+		public void setEmpresa(Empresa empresa) {
+			this.empresa = empresa;
 		}
 		
 		

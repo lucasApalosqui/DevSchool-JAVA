@@ -3,7 +3,7 @@ package myapp;
 public class Pedidoitem {
 		private Produto produto;
 		private Integer id; 
-		private Double quantidade;
+		private Integer quantidade;
 		private Double valorVenda;
 		private Double valorTotal;
 		
@@ -13,10 +13,10 @@ public class Pedidoitem {
 		void setId(Integer id) {
 			this.id = id;
 		}
-		public Double getQuantidade() {
+		public Integer getQuantidade() {
 			return quantidade;
 		}
-		public void setQuantidade(Double quantidade) {
+		public void setQuantidade(Integer quantidade) {
 			this.quantidade = quantidade;
 		}
 		public Double getValorVenda() {

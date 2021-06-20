@@ -8,10 +8,10 @@ public class Cadastro{
 		private Long cpfcnpj;
 		private Endereco endereco;
 		
-		private Integer getId() {
+		public Integer getId() {
 			return id;
 		}
-		void setId(Integer id) {
+		public void setId(Integer id) {
 			this.id = id;
 		}
 		public String getNome() {

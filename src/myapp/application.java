@@ -1,7 +1,8 @@
 package myapp;
-
 import java.util.ArrayList;
 import myapp.metodos.CadastrarEndereco;
+import myapp.metodos.GeraCupom;
+
 import java.util.Date;
 import java.util.List;
 
@@ -13,6 +14,14 @@ public class application{
 		cliente.setNome("Lucas Apalosqui");
 		cliente.setEmail("Lucas@gmail.com");
 		cliente.setTelefone(11988765435l);
+		
+		/* Adicionando dados da empresa */
+		Empresa empresaDado = new Empresa();
+		empresaDado.setIe(543676589L);
+		empresaDado.setIm(45327685L);
+		Cadastro cadEmpresa = Cadastrar.criarCadastro("Galeria do Rock", "panini@distribuidora.com", 11976543356L, 125436753000L);
+		cadEmpresa.setEndereco(CadastrarEndereco.criarEndereco("R. matias de paula", 25, "Vila Matilde", "são paulo", "SP", "apt09 B03"));
+		empresaDado.setCadastro(cadEmpresa);
 		
 		
 		/* Adicionando dados do pedido */
@@ -32,7 +41,7 @@ public class application{
 		
 		Cd p2 = new Cd();
 		p2.setCodigoBarras("ahuhsyg5453");
-		p2.setTitulo("A Girl Named You");
+		p2.setTitulo("Daijobu!");
 		p2.setValorVenda(55.80);
 		p2.setFaixas(8);
 		p2.setArtista(artista);
@@ -50,34 +59,29 @@ public class application{
 		List<Pedidoitem> itens = new ArrayList<>();
 		Pedidoitem item = new Pedidoitem();
 		item.setProduto(p1);
-		item.setQuantidade(2.0);
+		item.setQuantidade(2);
 		item.setValorVenda(p1.getValorVenda());
-		item.setValorTotal(item.getQuantidade() * item.getValorVenda());
+		item.setValorTotal(item.getQuantidade() * p1.getValorVenda());
+		
 		
 		itens.add(item);
 		
+		
 		item = new Pedidoitem();
 		item.setProduto(p2);
-		item.setQuantidade(3.0);
+		item.setQuantidade(3);
 		item.setValorVenda(p2.getValorVenda());
-		item.setValorTotal(item.getQuantidade() * item.getValorVenda());
+		item.setValorTotal(item.getQuantidade() * p2.getValorVenda());
 		
 		itens.add(item);
 		pedido.setItens(itens);
 		
-		
-		/* Adicionando dados da empresa */
-		Cadastro empresa = Cadastrar.criarCadastro("Panini", "panini@distribuidora.com", 11976543356L, 125436753000L);
-		empresa.setEndereco(CadastrarEndereco.criarEndereco("R. matias de paula", 25, "Vila Matilde", "são paulo", "SP", "apt09 B03"));
-		Empresa empresaDado = new Empresa();
-		empresaDado.setIe(543676589L);
-		empresaDado.setIm(45327685L);
+		pedido.setEmpresa(empresaDado);
+		pedido.getItens().get(0).setQuantidade(2);
+		pedido.getItens().get(1).setQuantidade(3);
 		
 		
+		GeraCupom.gerarCupom(pedido);
 		
-		
-		/*Endereco enderecoEmpresa = CadastrarEndereco.criarEndereco("R. matias de paula", 25, "Vila Matilde", "são paulo", "SP", "apt09 B03");*/
-		
-		System.out.println(empresa.getEndereco().getCidade() + empresa.getEndereco().getNumero());
 		}
 	}
