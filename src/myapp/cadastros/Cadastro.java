@@ -1,4 +1,4 @@
-package myapp;
+package myapp.cadastros;
 
 public class Cadastro{
 		private Integer id;

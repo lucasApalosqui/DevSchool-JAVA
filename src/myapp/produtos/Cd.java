@@ -1,4 +1,6 @@
-package myapp;
+package myapp.produtos;
+
+import myapp.cadastros.Cadastro;
 
 public class Cd extends Produto{
 	private Cadastro artista;

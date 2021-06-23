@@ -1,4 +1,4 @@
-package myapp;
+package myapp.produtos;
 
 public class Pedidoitem {
 		private Produto produto;

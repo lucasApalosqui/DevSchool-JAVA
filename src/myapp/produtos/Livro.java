@@ -1,4 +1,6 @@
-package myapp;
+package myapp.produtos;
+
+import myapp.cadastros.Cadastro;
 
 public class Livro extends Produto{
 	private Cadastro editora;

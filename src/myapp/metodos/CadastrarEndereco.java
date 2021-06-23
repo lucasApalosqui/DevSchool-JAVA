@@ -1,6 +1,6 @@
 package myapp.metodos;
 
-import myapp.Endereco;
+import myapp.cadastros.Endereco;
 
 
 

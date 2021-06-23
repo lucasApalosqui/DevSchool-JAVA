@@ -1,6 +1,6 @@
 package myapp.metodos;
 
-import myapp.Cadastro;
+import myapp.cadastros.Cadastro;
 
 public class Cadastrar {
 	

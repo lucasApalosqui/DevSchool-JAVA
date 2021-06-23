@@ -1,4 +1,4 @@
-package myapp;
+package myapp.cadastros;
 
 public class Endereco {
 	private String logradouro;

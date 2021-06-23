@@ -1,4 +1,4 @@
-package myapp;
+package myapp.transmissores;
 
 public class TransmissorSms {
 }

@@ -1,4 +1,4 @@
-package myapp;
+package myapp.produtos;
 
 public abstract class Produto {
 		private Integer id;
@@ -9,7 +9,7 @@ public abstract class Produto {
 		Integer getId() {
 			return id;
 		}
-		void setId(Integer id) {
+		public void setId(Integer id) {
 			this.id = id;
 		}
 		public String getCodigoBarras() {

@@ -2,10 +2,15 @@ package myapp;
 import java.util.ArrayList;
 import myapp.metodos.CadastrarEndereco;
 import myapp.metodos.GeraCupom;
+import myapp.produtos.Cd;
+import myapp.produtos.Pedido;
+import myapp.produtos.Pedidoitem;
 
 import java.util.Date;
 import java.util.List;
 
+import myapp.cadastros.Cadastro;
+import myapp.cadastros.Empresa;
 import myapp.metodos.Cadastrar;
 
 public class application{

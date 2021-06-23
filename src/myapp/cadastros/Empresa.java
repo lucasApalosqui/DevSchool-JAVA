@@ -1,4 +1,4 @@
-package myapp;
+package myapp.cadastros;
 
 public class Empresa {
 	private Cadastro cadastro;

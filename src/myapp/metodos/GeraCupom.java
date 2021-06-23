@@ -1,7 +1,8 @@
 package myapp.metodos;
 import java.text.SimpleDateFormat;
-import myapp.Empresa;
-import myapp.Pedido;
+import myapp.produtos.Pedido;
+
+import myapp.cadastros.Empresa;
 
 public class GeraCupom {
 	public static void gerarCupom(Pedido pedido) {

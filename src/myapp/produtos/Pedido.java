@@ -1,7 +1,10 @@
-package myapp;
+package myapp.produtos;
 
 import java.util.Date;
 import java.util.List;
+
+import myapp.cadastros.Cadastro;
+import myapp.cadastros.Empresa;
 
 public class Pedido {
 		private List<Pedidoitem> Itens;
