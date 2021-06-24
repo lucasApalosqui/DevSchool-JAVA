@@ -1,6 +1,7 @@
 package myapp;
 import java.util.ArrayList;
 import myapp.metodos.CadastrarEndereco;
+import myapp.metodos.FormatarDados;
 import myapp.metodos.GeraCupom;
 import myapp.produtos.Cd;
 import myapp.produtos.Pedido;
@@ -24,7 +25,7 @@ public class application{
 		Empresa empresaDado = new Empresa();
 		empresaDado.setIe(543676589L);
 		empresaDado.setIm(45327685L);
-		Cadastro cadEmpresa = Cadastrar.criarCadastro("Galeria do Rock", "panini@distribuidora.com", 11976543356L, 125436753000L);
+		Cadastro cadEmpresa = Cadastrar.criarCadastro("Galeria do Rock", "panini@distribuidora.com", 11976543356L, 12543675300001L);
 		cadEmpresa.setEndereco(CadastrarEndereco.criarEndereco("R. matias de paula", 25, "Vila Matilde", "são paulo", "SP", "apt09 B03"));
 		empresaDado.setCadastro(cadEmpresa);
 		
@@ -57,8 +58,8 @@ public class application{
 		Cadastro comprador = Cadastrar.criarCadastro("Lucas Apalosqui", "Lucas@gmail.com", 11988672997L,2779876544L);
 		pedido.setComprador(comprador);
 		pedido.setData(new Date(2021,06,17));
-		pedido.setCcf("000034");
-		pedido.setCoo("000327");
+		pedido.setCcf(34l);
+		pedido.setCoo(327l);
 		
 		
 		List<Pedidoitem> itens = new ArrayList<>();

@@ -1,7 +1,6 @@
 package myapp.metodos;
 import java.text.SimpleDateFormat;
 import myapp.produtos.Pedido;
-
 import myapp.cadastros.Empresa;
 
 public class GeraCupom {
@@ -13,13 +12,13 @@ public class GeraCupom {
 		/* imprimir dados da empresa no cupom */
 		sb.append(empresa.getCadastro().getNome() + "\n");
 		sb.append(String.format("%s, %d, %s - %s - %s\n", empresa.getCadastro().getEndereco().getLogradouro(), empresa.getCadastro().getEndereco().getNumero(), empresa.getCadastro().getEndereco().getBairro(), empresa.getCadastro().getEndereco().getCidade(), empresa.getCadastro().getEndereco().getEstado()));
-		sb.append(String.format("CNPJ: %d\nIE: %s\nIM: %s\n", empresa.getCadastro().getCpfcnpj(), empresa.getIe(), empresa.getIm()));
+		sb.append(String.format("CNPJ: %s\nIE: %s\nIM: %s\n", FormatarDados.formataCpfCnpj(empresa.getCadastro().getCpfcnpj()), FormatarDados.formataIeIm(empresa.getIe()), FormatarDados.formataIeIm(empresa.getIm())));
 		sb.append("---------------------------------------------------------\n");
 		
 		/* imprimir descrição do pedido no cupom */
-		SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
 		String dataFormatada = formatador.format(pedido.getData());
-		sb.append(String.format("%sV %20s   %s\n", dataFormatada, pedido.getCcf(), pedido.getCoo()));
+		sb.append(String.format("%s CCF: %06d   CCO: %06d\n", dataFormatada, pedido.getCcf(), pedido.getCoo()));
 		sb.append("     CUPOM FISCAL\nitem código descrição qtd.un.vl unit( R$) st vl item( R$)\n");
 		sb.append("---------------------------------------------------------\n");
 		

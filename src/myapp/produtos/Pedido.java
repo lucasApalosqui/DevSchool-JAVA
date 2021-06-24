@@ -13,8 +13,8 @@ public class Pedido {
 		private Integer id;
 		private Date data;
 		private Double valorTotal;
-		private String ccf;
-		private String coo;
+		private Long ccf;
+		private Long coo;
 		private Empresa empresa;
 		
 		public Pedidoitem getPedidoitem() {
@@ -53,16 +53,16 @@ public class Pedido {
 		public List<Pedidoitem> getItens() {
 			return Itens;
 		}
-		public String getCcf() {
+		public Long getCcf() {
 			return ccf;
 		}
-		public void setCcf(String ccf) {
+		public void setCcf(Long ccf) {
 			this.ccf = ccf;
 		}
-		public String getCoo() {
+		public Long getCoo() {
 			return coo;
 		}
-		public void setCoo(String coo) {
+		public void setCoo(Long coo) {
 			this.coo = coo;
 		}
 		public Empresa getEmpresa() {
