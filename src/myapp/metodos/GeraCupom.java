@@ -4,7 +4,7 @@ import myapp.produtos.Pedido;
 import myapp.cadastros.Empresa;
 
 public class GeraCupom {
-	public static void gerarCupom(Pedido pedido) {
+	public static String gerarCupom(Pedido pedido) {
 		Empresa empresa = pedido.getEmpresa();
 		
 		StringBuilder sb = new StringBuilder();
@@ -38,10 +38,6 @@ public class GeraCupom {
 		/* imprimir total dos produtos */
 		sb.append(String.format("%57s\nTOTAL  R$ %46.2f\ndinheiro %47.2f\n\n VOLTE SEMPRE !!!!!!!!\n---------------------------------------------------------\n", "---------------", totalzao, totalzao));
 		
-		
-		
-		
-		
-		System.out.println(sb.toString());
+		return sb.toString();
 	}
 }

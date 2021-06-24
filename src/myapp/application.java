@@ -1,8 +1,10 @@
 package myapp;
+import java.io.File;
 import java.util.ArrayList;
 import myapp.metodos.CadastrarEndereco;
 import myapp.metodos.FormatarDados;
 import myapp.metodos.GeraCupom;
+import myapp.metodos.PrinterApp;
 import myapp.produtos.Cd;
 import myapp.produtos.Pedido;
 import myapp.produtos.Pedidoitem;
@@ -87,7 +89,11 @@ public class application{
 		pedido.getItens().get(1).setQuantidade(3);
 		
 		
-		GeraCupom.gerarCupom(pedido);
+		String conteudo = GeraCupom.gerarCupom(pedido);
+		File dir = new File("C:\\Users\\Sou Proa\\eclipse-workspace\\cupom");
+		
+		PrinterApp.printCupom(conteudo, dir, "cupom.txt");
+			
 		
 		}
 	}
